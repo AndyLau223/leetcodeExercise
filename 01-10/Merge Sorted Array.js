@@ -18,5 +18,10 @@ var merge2 = function(nums1, m, nums2, n) {
         } else {
             cur = nums2[p2++];
         }
+        sorted[p1 + p2 - 1] = cur;
+    }
+
+    for (let i = 0; i < m+n; i++) {
+        nums1[i] = sorted[i]; 
     }
 }
